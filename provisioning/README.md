@@ -9,7 +9,7 @@ gcloud services enable compute.googleapis.com sqladmin.googleapis.com iam.google
 Deploy the sample web application:
 
 ```
-git clone https://github.com/mittz/role-play-webapp.git
+git clone https://github.com/ryotat7/role-play-webapp.git
 cd role-play-webapp/provisioning
 terraform init
 terraform apply -var="project_id=${GOOGLE_CLOUD_PROJECT}"

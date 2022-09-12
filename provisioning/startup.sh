@@ -80,7 +80,7 @@ create_env_file() {
 
 deploy_roleplay_webapp() {
     CLONE_PATH="/root/role-play-webapp"
-    git clone https://github.com/mittz/role-play-webapp.git $CLONE_PATH
+    git clone https://github.com/ryotat7/role-play-webapp.git $CLONE_PATH
 
     create_env_file $CLONE_PATH/webapp
 

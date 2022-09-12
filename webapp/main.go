@@ -7,9 +7,9 @@ import (
 
 	_ "github.com/lib/pq"
 
-	"github.com/mittz/role-play-webapp/webapp/app"
-	"github.com/mittz/role-play-webapp/webapp/database"
-	"github.com/mittz/role-play-webapp/webapp/utils"
+	"github.com/ryotat7/role-play-webapp/webapp/app"
+	"github.com/ryotat7/role-play-webapp/webapp/database"
+	"github.com/ryotat7/role-play-webapp/webapp/utils"
 )
 
 func main() {

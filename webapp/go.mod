@@ -1,4 +1,4 @@
-module github.com/mittz/role-play-webapp/webapp
+module github.com/ryotat7/role-play-webapp/webapp
 
 go 1.17
 

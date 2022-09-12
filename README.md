@@ -12,7 +12,7 @@ This provides resources for the competition of `Role Play Series - Web Applicati
 # Deployment for Web Application on Google Cloud
 
 ```shell
-$ git clone git@github.com:mittz/role-play-webapp.git
+$ git clone git@github.com:ryotat7/role-play-webapp.git
 $ export TF_VAR_project=”YOUR_PROJECT_ID”
 $ cd provisioning
 $ terraform init

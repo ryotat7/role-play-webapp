@@ -9,7 +9,7 @@ import (
 	"strings"
 	"testing"
 
-	"github.com/mittz/role-play-webapp/webapp/database"
+	"github.com/ryotat7/role-play-webapp/webapp/database"
 	"github.com/stretchr/testify/assert" // TODO: Replace this with gopkg.in/check.v1
 )
 

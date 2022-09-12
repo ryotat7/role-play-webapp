@@ -10,7 +10,7 @@ import (
 
 	texporter "github.com/GoogleCloudPlatform/opentelemetry-operations-go/exporter/trace"
 	"github.com/gin-gonic/gin"
-	"github.com/mittz/role-play-webapp/webapp/database"
+	"github.com/ryotat7/role-play-webapp/webapp/database"
 	"go.opentelemetry.io/contrib/instrumentation/github.com/gin-gonic/gin/otelgin"
 	"go.opentelemetry.io/otel"
 	sdktrace "go.opentelemetry.io/otel/sdk/trace"
