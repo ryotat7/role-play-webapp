@@ -1,10 +1,10 @@
-data "google_compute_default_service_account" "default" {}
-
+/*
 resource "google_compute_instance" "scstore" {
   name         = var.service_name
   machine_type = var.gce_machine_type
   zone         = var.zone
   tags         = ["http-server"]
+  deletion_protection = false
   boot_disk {
     initialize_params {
       image = var.gce_image_name
@@ -29,7 +29,8 @@ resource "google_compute_instance" "scstore" {
   metadata_startup_script = file("${path.module}/startup.sh")
 
   service_account {
-    email = data.google_compute_default_service_account.default.email
+    email = ""
     scopes = ["cloud-platform"]
   }
 }
+*/

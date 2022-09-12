@@ -1,0 +1,418 @@
+{
+  "version": 4,
+  "terraform_version": "1.2.7",
+  "serial": 21,
+  "lineage": "0a77157c-76b7-2e1e-eec1-877014975f01",
+  "outputs": {},
+  "resources": [
+    {
+      "mode": "data",
+      "type": "google_compute_default_service_account",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "display_name": "Compute Engine default service account",
+            "email": "840582161054-compute@developer.gserviceaccount.com",
+            "id": "projects/qwiklabs-gcp-03-1486ac545c04/serviceAccounts/840582161054-compute@developer.gserviceaccount.com",
+            "name": "projects/qwiklabs-gcp-03-1486ac545c04/serviceAccounts/840582161054-compute@developer.gserviceaccount.com",
+            "project": "qwiklabs-gcp-03-1486ac545c04",
+            "unique_id": "109526157806512915678"
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_compute_address",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "address": "34.133.129.48",
+            "address_type": "EXTERNAL",
+            "creation_timestamp": "2022-09-08T03:25:40.087-07:00",
+            "description": "",
+            "id": "projects/qwiklabs-gcp-03-1486ac545c04/regions/us-central1/addresses/ipv4-address",
+            "name": "ipv4-address",
+            "network": "",
+            "network_tier": "PREMIUM",
+            "prefix_length": 0,
+            "project": "qwiklabs-gcp-03-1486ac545c04",
+            "purpose": "",
+            "region": "us-central1",
+            "self_link": "https://www.googleapis.com/compute/v1/projects/qwiklabs-gcp-03-1486ac545c04/regions/us-central1/addresses/ipv4-address",
+            "subnetwork": "",
+            "timeouts": null,
+            "users": []
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDB9fQ=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_compute_firewall",
+      "name": "allow_ingress_from_internet",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "allow": [
+              {
+                "ports": [
+                  "22",
+                  "80"
+                ],
+                "protocol": "tcp"
+              }
+            ],
+            "creation_timestamp": "2022-09-08T00:23:33.161-07:00",
+            "deny": [],
+            "description": "",
+            "destination_ranges": [],
+            "direction": "INGRESS",
+            "disabled": false,
+            "enable_logging": null,
+            "id": "projects/qwiklabs-gcp-03-1486ac545c04/global/firewalls/allow-ingress-from-internet",
+            "log_config": [],
+            "name": "allow-ingress-from-internet",
+            "network": "https://www.googleapis.com/compute/v1/projects/qwiklabs-gcp-03-1486ac545c04/global/networks/scstore",
+            "priority": 1000,
+            "project": "qwiklabs-gcp-03-1486ac545c04",
+            "self_link": "https://www.googleapis.com/compute/v1/projects/qwiklabs-gcp-03-1486ac545c04/global/firewalls/allow-ingress-from-internet",
+            "source_ranges": [
+              "0.0.0.0/0"
+            ],
+            "source_service_accounts": [],
+            "source_tags": [],
+            "target_service_accounts": [],
+            "target_tags": [],
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "google_compute_network.default"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_compute_global_address",
+      "name": "private_ip_address",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google-beta\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "address": "10.15.0.0",
+            "address_type": "INTERNAL",
+            "creation_timestamp": "2022-09-08T00:23:33.078-07:00",
+            "description": "",
+            "id": "projects/qwiklabs-gcp-03-1486ac545c04/global/addresses/private-ip-address",
+            "ip_version": "",
+            "label_fingerprint": "42WmSpB8rSM=",
+            "labels": {},
+            "name": "private-ip-address",
+            "network": "https://www.googleapis.com/compute/v1/projects/qwiklabs-gcp-03-1486ac545c04/global/networks/scstore",
+            "prefix_length": 16,
+            "project": "qwiklabs-gcp-03-1486ac545c04",
+            "purpose": "VPC_PEERING",
+            "self_link": "https://www.googleapis.com/compute/v1/projects/qwiklabs-gcp-03-1486ac545c04/global/addresses/private-ip-address",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "google_compute_network.default"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_compute_instance",
+      "name": "scstore",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": []
+    },
+    {
+      "mode": "managed",
+      "type": "google_compute_network",
+      "name": "default",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "auto_create_subnetworks": true,
+            "delete_default_routes_on_create": false,
+            "description": "",
+            "enable_ula_internal_ipv6": false,
+            "gateway_ipv4": "",
+            "id": "projects/qwiklabs-gcp-03-1486ac545c04/global/networks/scstore",
+            "internal_ipv6_range": "",
+            "mtu": 0,
+            "name": "scstore",
+            "project": "qwiklabs-gcp-03-1486ac545c04",
+            "routing_mode": "REGIONAL",
+            "self_link": "https://www.googleapis.com/compute/v1/projects/qwiklabs-gcp-03-1486ac545c04/global/networks/scstore",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19"
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_project_iam_member",
+      "name": "benchmark",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "condition": [],
+            "etag": "BwXoJU9ngAg=",
+            "id": "qwiklabs-gcp-03-1486ac545c04/roles/viewer/serviceAccount:benchmark@role-play-web-app-host-project.iam.gserviceaccount.com",
+            "member": "serviceAccount:benchmark@role-play-web-app-host-project.iam.gserviceaccount.com",
+            "project": "qwiklabs-gcp-03-1486ac545c04",
+            "role": "roles/viewer"
+          },
+          "sensitive_attributes": [],
+          "private": "bnVsbA=="
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_service_networking_connection",
+      "name": "private_vpc_connection",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google-beta\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "id": "projects%2Fqwiklabs-gcp-03-1486ac545c04%2Fglobal%2Fnetworks%2Fscstore:servicenetworking.googleapis.com",
+            "network": "projects/qwiklabs-gcp-03-1486ac545c04/global/networks/scstore",
+            "peering": "servicenetworking-googleapis-com",
+            "reserved_peering_ranges": [
+              "private-ip-address"
+            ],
+            "service": "servicenetworking.googleapis.com",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "google_compute_global_address.private_ip_address",
+            "google_compute_network.default"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_sql_database",
+      "name": "scstore",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "charset": "UTF8",
+            "collation": "en_US.UTF8",
+            "id": "projects/qwiklabs-gcp-03-1486ac545c04/instances/scstore-9c704aee/databases/scstore",
+            "instance": "scstore-9c704aee",
+            "name": "scstore",
+            "project": "qwiklabs-gcp-03-1486ac545c04",
+            "self_link": "https://sqladmin.googleapis.com/sql/v1beta4/projects/qwiklabs-gcp-03-1486ac545c04/instances/scstore-9c704aee/databases/scstore",
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxMjAwMDAwMDAwMDAwLCJkZWxldGUiOjEyMDAwMDAwMDAwMDAsInVwZGF0ZSI6MTIwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "google_compute_global_address.private_ip_address",
+            "google_compute_network.default",
+            "google_service_networking_connection.private_vpc_connection",
+            "google_sql_database_instance.scstore",
+            "random_id.db_instance_name_suffix"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_sql_database_instance",
+      "name": "scstore",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "clone": [],
+            "connection_name": "qwiklabs-gcp-03-1486ac545c04:asia-east1:scstore-9c704aee",
+            "database_version": "POSTGRES_14",
+            "deletion_protection": true,
+            "encryption_key_name": null,
+            "first_ip_address": "10.15.0.3",
+            "id": "scstore-9c704aee",
+            "ip_address": [
+              {
+                "ip_address": "10.15.0.3",
+                "time_to_retire": "",
+                "type": "PRIVATE"
+              }
+            ],
+            "master_instance_name": "",
+            "name": "scstore-9c704aee",
+            "private_ip_address": "10.15.0.3",
+            "project": "qwiklabs-gcp-03-1486ac545c04",
+            "public_ip_address": "",
+            "region": "asia-east1",
+            "replica_configuration": [],
+            "restore_backup_context": [],
+            "root_password": null,
+            "self_link": "https://sqladmin.googleapis.com/sql/v1beta4/projects/qwiklabs-gcp-03-1486ac545c04/instances/scstore-9c704aee",
+            "server_ca_cert": [
+              {
+                "cert": "-----BEGIN CERTIFICATE-----\nMIIDfzCCAmegAwIBAgIBADANBgkqhkiG9w0BAQsFADB3MS0wKwYDVQQuEyQyNWJj\nMmZmNC05YjkzLTRjNTItYjlmYy0wOTcxZjE0N2U4ZjQxIzAhBgNVBAMTGkdvb2ds\nZSBDbG91ZCBTUUwgU2VydmVyIENBMRQwEgYDVQQKEwtHb29nbGUsIEluYzELMAkG\nA1UEBhMCVVMwHhcNMjIwOTA4MDcyODMyWhcNMzIwOTA1MDcyOTMyWjB3MS0wKwYD\nVQQuEyQyNWJjMmZmNC05YjkzLTRjNTItYjlmYy0wOTcxZjE0N2U4ZjQxIzAhBgNV\nBAMTGkdvb2dsZSBDbG91ZCBTUUwgU2VydmVyIENBMRQwEgYDVQQKEwtHb29nbGUs\nIEluYzELMAkGA1UEBhMCVVMwggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIB\nAQDFKL7DX7DA/vXaSnsvRgch/DK4tVi3lgENIJ7dJDiHHdTMFS+cwUQiyS6y8vTJ\nAptKr7zUnwE8g4vjn6rLCiEKidc+RNOIAQaXBzayekWkphjx/8f47Pddpx6L+bzw\n0xBE2hbzHn/fdP9DUz9vBvcl+zCqqL8RUF9U66BDSY2vJ8H1KTtihoGB/9X6bhwJ\nI2rldMmxoL/5yl5/YGgaKVkJS/yMb0qnH/lI57vzCE/MQkC2p7ucq4QX3X4jAi1i\ngWebjJxsurgU5Edt7XYayoS2G7w26dJ2PXF1vxsOrlxcAHjT2JmhNBF0psQeaKXA\n9bABneE6ww/3reye4v486+MBAgMBAAGjFjAUMBIGA1UdEwEB/wQIMAYBAf8CAQAw\nDQYJKoZIhvcNAQELBQADggEBAGhW8qUA0nmLuQC2sd7Czf1TEZG1v93qnLKfjdfl\nmKoLoe1BwnFq/DxdQ18c0FLbn1Ccn8yZDjYUv6b9boUnvzlFhptTnrhAvWqzrGoa\nqea6mkqJ7uJGUKWSYYrOgV8uwO3XWr1miwB7XUQ0mRSzZHEaJ/3nkpkMSPJV5DWl\n7ThqqOnAZlnUhZjXwXWt+cmXxkHRdQe6UnHtWIBzhvauS5Q0TT5Wbidn1v9lPgVE\ngFX0lyXapExkCfn7vVUEpFhWxM6v55kNij6W6JphT+rOSrrgJ1NswACoHTcT+N5R\nSoR/Y9IHRInImkF8rCd/yFfvyV/cHIiLBd/szShihXxkX08=\n-----END CERTIFICATE-----",
+                "common_name": "C=US,O=Google\\, Inc,CN=Google Cloud SQL Server CA,dnQualifier=25bc2ff4-9b93-4c52-b9fc-0971f147e8f4",
+                "create_time": "2022-09-08T07:28:32.624Z",
+                "expiration_time": "2032-09-05T07:29:32.624Z",
+                "sha1_fingerprint": "1f68bdbb610306fb8bcb4aa6408ac0d6bab0532a"
+              }
+            ],
+            "service_account_email_address": "p840582161054-p53u5k@gcp-sa-cloud-sql.iam.gserviceaccount.com",
+            "settings": [
+              {
+                "activation_policy": "ALWAYS",
+                "active_directory_config": [],
+                "availability_type": "REGIONAL",
+                "backup_configuration": [
+                  {
+                    "backup_retention_settings": [
+                      {
+                        "retained_backups": 7,
+                        "retention_unit": "COUNT"
+                      }
+                    ],
+                    "binary_log_enabled": false,
+                    "enabled": false,
+                    "location": "",
+                    "point_in_time_recovery_enabled": false,
+                    "start_time": "08:00",
+                    "transaction_log_retention_days": 7
+                  }
+                ],
+                "collation": "",
+                "database_flags": [],
+                "disk_autoresize": true,
+                "disk_autoresize_limit": 0,
+                "disk_size": 10,
+                "disk_type": "PD_SSD",
+                "insights_config": [],
+                "ip_configuration": [
+                  {
+                    "allocated_ip_range": "",
+                    "authorized_networks": [],
+                    "ipv4_enabled": false,
+                    "private_network": "projects/qwiklabs-gcp-03-1486ac545c04/global/networks/scstore",
+                    "require_ssl": false
+                  }
+                ],
+                "location_preference": [
+                  {
+                    "follow_gae_application": "",
+                    "secondary_zone": "",
+                    "zone": "asia-east1-b"
+                  }
+                ],
+                "maintenance_window": [],
+                "password_validation_policy": [],
+                "pricing_plan": "PER_USE",
+                "sql_server_audit_config": [],
+                "tier": "db-custom-1-3840",
+                "user_labels": {},
+                "version": 8
+              }
+            ],
+            "timeouts": null
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjoxODAwMDAwMDAwMDAwLCJkZWxldGUiOjE4MDAwMDAwMDAwMDAsInVwZGF0ZSI6MTgwMDAwMDAwMDAwMH19",
+          "dependencies": [
+            "google_compute_global_address.private_ip_address",
+            "google_compute_network.default",
+            "google_service_networking_connection.private_vpc_connection",
+            "random_id.db_instance_name_suffix"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "google_sql_user",
+      "name": "scstore",
+      "provider": "provider[\"registry.terraform.io/hashicorp/google\"]",
+      "instances": [
+        {
+          "schema_version": 1,
+          "attributes": {
+            "deletion_policy": null,
+            "host": "",
+            "id": "scstore//scstore-9c704aee",
+            "instance": "scstore-9c704aee",
+            "name": "scstore",
+            "password": "scstore",
+            "project": "qwiklabs-gcp-03-1486ac545c04",
+            "sql_server_user_details": [],
+            "timeouts": null,
+            "type": ""
+          },
+          "sensitive_attributes": [],
+          "private": "eyJlMmJmYjczMC1lY2FhLTExZTYtOGY4OC0zNDM2M2JjN2M0YzAiOnsiY3JlYXRlIjo2MDAwMDAwMDAwMDAsImRlbGV0ZSI6NjAwMDAwMDAwMDAwLCJ1cGRhdGUiOjYwMDAwMDAwMDAwMH0sInNjaGVtYV92ZXJzaW9uIjoiMSJ9",
+          "dependencies": [
+            "google_compute_global_address.private_ip_address",
+            "google_compute_network.default",
+            "google_service_networking_connection.private_vpc_connection",
+            "google_sql_database_instance.scstore",
+            "random_id.db_instance_name_suffix"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "managed",
+      "type": "random_id",
+      "name": "db_instance_name_suffix",
+      "provider": "provider[\"registry.terraform.io/hashicorp/random\"]",
+      "instances": [
+        {
+          "schema_version": 0,
+          "attributes": {
+            "b64_std": "nHBK7g==",
+            "b64_url": "nHBK7g",
+            "byte_length": 4,
+            "dec": "2624604910",
+            "hex": "9c704aee",
+            "id": "nHBK7g",
+            "keepers": null,
+            "prefix": null
+          },
+          "sensitive_attributes": []
+        }
+      ]
+    }
+  ]
+}

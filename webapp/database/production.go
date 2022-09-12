@@ -91,6 +91,14 @@ func (dbh ProdDatabaseHandler) InitDatabase() error {
 	)
 	`
 
+	queryCreateCheckoutsTableIndexOnUserId := `
+	CREATE INDEX IF NOT EXISTS checkouts_user_id_idx ON checkouts (user_id)
+	`
+
+	queryCreateCheckoutsTableIndexOnProductId := `
+	CREATE INDEX IF NOT EXISTS checkouts_product_id_idx ON checkouts (product_id)
+	`
+
 	if _, err := db.Exec(queryCreateProductsTable); err != nil {
 		return err
 	}
@@ -100,6 +108,14 @@ func (dbh ProdDatabaseHandler) InitDatabase() error {
 	}
 
 	if _, err := db.Exec(queryCreateCheckoutsTable); err != nil {
+		return err
+	}
+
+	if _, err := db.Exec(queryCreateCheckoutsTableIndexOnUserId); err != nil {
+		return err
+	}
+
+	if _, err := db.Exec(queryCreateCheckoutsTableIndexOnProductId); err != nil {
 		return err
 	}
 

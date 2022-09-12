@@ -9,6 +9,7 @@ resource "google_compute_address" "default" {
   address_type = "EXTERNAL"
 }
 
+# Private VPC Connection for Cloud SQL
 resource "google_compute_global_address" "private_ip_address" {
   provider = google-beta
 

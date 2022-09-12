@@ -6,6 +6,18 @@ variable "region" {
     default     = "us-central1"
 }
 
+variable "region2" {
+    description = "Region"
+    type        = string
+    default     = "us-west1"
+}
+
+variable "region3" {
+    description = "Region"
+    type        = string
+    default     = "us-east1"
+}
+
 variable "zone" {
     description = "Zone"
     type        = string
