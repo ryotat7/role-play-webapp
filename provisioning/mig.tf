@@ -51,7 +51,7 @@ module "cloud-nat-mig3" {
 # MIGs
 module "mig_template" {
   source     = "terraform-google-modules/vm/google//modules/instance_template"
-  version    = "~> 6.2.0"
+  version    = "6.2.0"
   network    = google_compute_network.default.self_link
   service_account = {
     email  = ""
@@ -80,7 +80,7 @@ module "mig_template" {
 
 module "mig" {
   source            = "terraform-google-modules/vm/google//modules/mig"
-  version           = "~> 6.2.0"
+  version           = "6.2.0"
   instance_template = module.mig_template.self_link
   region            = var.region
   hostname          = var.service_name
@@ -94,7 +94,7 @@ module "mig" {
 
 module "mig2" {
   source            = "terraform-google-modules/vm/google//modules/mig"
-  version           = "~> 6.2.0"
+  version           = "6.2.0"
   instance_template = module.mig_template.self_link
   region            = var.region2
   hostname          = var.service_name
@@ -108,7 +108,7 @@ module "mig2" {
 
 module "mig3" {
   source            = "terraform-google-modules/vm/google//modules/mig"
-  version           = "~> 6.2.0"
+  version           = "6.2.0"
   instance_template = module.mig_template.self_link
   region            = var.region3
   hostname          = var.service_name

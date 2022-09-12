@@ -4,7 +4,7 @@ resource "google_spanner_instance" "scstore" {
   num_nodes    = 1
 }
 
-
+/*
 resource "google_spanner_database" "scstore" {
   instance = google_spanner_instance.scstore.name
   name     = var.service_name
@@ -17,3 +17,4 @@ resource "google_spanner_database" "scstore" {
   deletion_protection = false
   database_dialect = POSTGRESQL
 }
+*/
