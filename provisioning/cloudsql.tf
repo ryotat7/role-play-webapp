@@ -13,23 +13,23 @@ resource "google_sql_database_instance" "scstore" {
   settings {
     tier              = var.cloudsql_machine_type
     availability_type = "REGIONAL"
-    // availability_type = "ZONAL"
 
     ip_configuration {
       ipv4_enabled        = false
       private_network     = google_compute_network.default.id
       require_ssl         = false
-      //allocated_ip_range  = null
     }
 
     location_preference {
       zone             = var.zone
     }
-    /*
-    database_flags {
-        name  = "cloudsql.iam_authentication"
-        value = "on"
-    }*/
+
+    insights_config {
+      query_insights_enabled  = true
+      query_string_length     = 1024
+      record_application_tags = false
+      record_client_address   = false
+    }
   }
 }
 
@@ -45,56 +45,10 @@ resource "google_sql_user" "scstore" {
 }
 
 // read replicas
-resource "google_sql_database_instance" "scstore_read_replica" {
-  name                 = "${var.service_name}-${random_id.db_instance_name_suffix.hex}-read-replica"
-  master_instance_name = google_sql_database_instance.scstore.name
-  region               = var.region
-  database_version     = "POSTGRES_14"
-
-  replica_configuration {
-    failover_target = false
-  }
-
-  settings {
-    tier              = var.cloudsql_machine_type
-    availability_type = "REGIONAL"
-
-    ip_configuration {
-      ipv4_enabled        = false
-      private_network     = google_compute_network.default.id
-      require_ssl         = false
-    }
-  }
-  deletion_protection = false # set to true to prevent destruction of the resource
-}
-
 resource "google_sql_database_instance" "scstore_read_replica2" {
   name                 = "${var.service_name}-${random_id.db_instance_name_suffix.hex}-read-replica-2"
   master_instance_name = google_sql_database_instance.scstore.name
   region               = var.region2
-  database_version     = "POSTGRES_14"
-
-  replica_configuration {
-    failover_target = false
-  }
-
-  settings {
-    tier              = var.cloudsql_machine_type
-    availability_type = "REGIONAL"
-
-    ip_configuration {
-      ipv4_enabled        = false
-      private_network     = google_compute_network.default.id
-      require_ssl         = false
-    }
-  }
-  deletion_protection = false # set to true to prevent destruction of the resource
-}
-
-resource "google_sql_database_instance" "scstore_read_replica3" {
-  name                 = "${var.service_name}-${random_id.db_instance_name_suffix.hex}-read-replica-3"
-  master_instance_name = google_sql_database_instance.scstore.name
-  region               = var.region3
   database_version     = "POSTGRES_14"
 
   replica_configuration {

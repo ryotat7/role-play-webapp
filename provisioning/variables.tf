@@ -9,7 +9,7 @@ variable "region" {
 variable "region2" {
     description = "Region"
     type        = string
-    default     = "us-west1"
+    default     = "us-east5" #"us-west1"
 }
 
 variable "region3" {
@@ -55,4 +55,9 @@ variable "cloudsql_machine_type" {
 variable "database_scstore_password" {
     description = "Password of database user: scstore"
     type = string
+}
+
+variable "regions" {
+    type = list(string)
+    default = [ "us-central1", "us-east5" ] # [ "us-central1" ]
 }
